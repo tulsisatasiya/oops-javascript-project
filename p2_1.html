@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table border="3">
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Phone</td>
+            </tr>
+
+            <tbody id="records"></tbody>
+
+        </table>
+         <br><br>
+        <button onclick="save()">Click </button>
+    </body>
+</html>
+
+<script type="text/javascript">
+
+    class add{
+
+        constructor(abc){}
+
+        tabledatapass(data){
+        var tbl = "";
+        data.map((val)=>{
+            tbl += `
+                    <tr>
+                    <td>${val.name}</td>
+                    <td>${val.email}</td>
+                    <td>${val.phone}</td>
+                    </tr>
+                    `
+        });
+
+        document.getElementById('records').innerHTML = tbl;
+    }
+    }
+
+    let data = [
+    {
+        name : "jay",
+        email : "jay@gmail.com",
+        phone : "12345",
+    },
+    {
+        name : "ajay",
+        email : "ajay@gmail.com",
+        phone : "12345",
+    },
+    {
+        name : "vijay",
+        email : "vijay@gmail.com",
+        phone : "12345",
+    },
+    {
+        name : "ashish",
+        email : "ashish@gmail.com",
+        phone : "12345",
+    },
+];
+
+let obj = new add;
+
+    function save(){
+        obj.tabledatapass(data);
+    }
+
+</script>

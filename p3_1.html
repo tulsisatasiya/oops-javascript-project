@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+        <form name="form1">
+            <h1>Enter the number</h1>
+            <input type="text" id="add"/>
+            <button onclick="save()">Click </button>
+        </form>
+
+        <h2 id="records"></h2>
+    </body>
+</html>
+
+<script type="text/javascript">
+
+    class table{
+        constructor(){}
+
+        mul(data){
+            let i=1;
+            do{
+                document.write("<h2>"+data+" X "+ i +" = "+data * i+"</h2>");
+                i++;
+            }while(i<=10)
+        }
+        
+    }
+
+    let newobj = new table;
+    function save(){
+        let a = parseInt(document.getElementById('add').value);
+        newobj.mul(a);
+    }
+</script>

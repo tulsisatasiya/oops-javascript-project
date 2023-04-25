@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+        <center><h1>Student result</h1></center><br>
+        <table border="2" align="center">
+            <tr>
+                <td><label for="">Physics:- </label></td>
+                <td><input type="text" name="" id="txt1"></td>
+            </tr>
+            <tr>
+                <td><label for="">Chemistry:- </label></td>
+                <td><input type="text" name="" id="txt2"></td>
+            </tr>
+            <tr>
+                <td><label for="">Biology:- </label></td>
+                <td><input type="text" name="" id="txt3"></td>
+            </tr>
+            <tr>   
+                <td><label for="">Mathematics:- </label></td>
+                <td><input type="text" name="" id="txt4"></td>
+            </tr>
+            <tr>
+                <td><label for="">Computer:- </label></td>
+                <td><input type="text" name="" id="txt5"></td>
+            </tr>
+            <tr>
+                 <td><button type="submit" onclick="calculate()">calculate</button></td>
+            </tr>
+        </table>
+
+         <h2 id="abc" align="center"></h2>
+    </body>
+</html>
+
+<script type="text/javascript">
+
+
+
+    class Marks {
+            abcd(a1,a2,a3,a4,a5){
+                
+                let sum = a1+a2+a3+a4+a5;
+                // document.write("<h2>TOTAL :- "+sum+"</h2>");
+
+                let final = sum/5;
+                if(final >=90){
+                document.getElementById('abc').innerHTML = "Your  Grade is A , congratulations";
+                }
+                else if(final >=80){
+                document.getElementById('abc').innerHTML = "Your  Grade is B";
+                }
+                else if(final >=70){
+                document.getElementById('abc').innerHTML = "Your  Grade is C";
+                }
+                else if(final >=60){
+                document.getElementById('abc').innerHTML = "Your  Grade is D";
+                }
+                else if(final >=50){
+                document.getElementById('abc').innerHTML = "Your  Grade is E";
+                }
+                else if(final >=40){
+                document.getElementById('abc').innerHTML = "Your  Grade is F";
+                }
+                else{
+                document.getElementById('abc').innerHTML = "Enter valid input.";
+                }
+        }
+    }
+
+    let obj = new Marks;
+        function calculate(){
+            const a = parseFloat(document.getElementById('txt1').value);
+            const b = parseFloat(document.getElementById('txt2').value);
+            const c = parseFloat(document.getElementById('txt3').value);
+            const d = parseFloat(document.getElementById('txt4').value);
+            const e = parseFloat(document.getElementById('txt5').value);
+            obj.abcd(a,b,c,d,e);
+        }
+
+</script>
